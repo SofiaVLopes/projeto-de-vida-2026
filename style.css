@@ -59,14 +59,18 @@ body {
   display: block;
 }
 
+/* quando a largura mínima da tela for maior que 768px.*/
 @media screen and (min-width: 768px) {
-  /* código omitido */
   .botoes {
     display: flex;
-  .botao:first-child {
+  }
+}
+     .botao:first-child {
     border-radius: 40px 0 0 0;
   }
 }
+  .botao:last-child {
+    border-radius: 0 40px 0 0;
   }
-
-
+}
+ 
