@@ -65,6 +65,10 @@ body {
   border-bottom: 4px solid var(--verde);
 }
 
+.abas-textos{
+  background-color:var(--texto-fundo);
+}
+
 /* quando a largura mínima da tela for maior que 768px.*/
 @media screen and (min-width: 768px) {
  
