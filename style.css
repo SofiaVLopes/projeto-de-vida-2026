@@ -59,9 +59,9 @@ body {
   display: block;
 }
 
-.botao.ativo {
+.botao-ativo {
   background-color: var(--botao-ativo);
-  border-bottom: 4px solid var(--verde);
+  border-bottom: 4px solid, var(--verde);
 }
 
 .abas-textos{
