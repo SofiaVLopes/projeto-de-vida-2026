@@ -17,10 +17,20 @@ textos[i].classList.add("ativo");
 }
 
 const contadores = document.querySelectorAll(".contador");
-const tempoObjetivo1 = new Date("2026-04-20T00:00:00");
+const tempoObjetivo1 = new Date("2026-08-20T00:00:00");
+const tempoObjetivo2 = new Date("2026-07-20T00:00:00");
+const tempoObjetivo3 = new Date("2026-08-20T00:00:00");
+const tempoObjetivo4 = new Date("2026-07-20T00:00:00");
+const tempoObjetivo5 = new Date("2026-09-20T00:00:00");
+const tempoObjetivo6 = new Date("2026-12-20T00:00:00");
 let tempoAtual = new Date();
 
 contadores[0].textContent = calculaTempo(tempoObjetivo1);
+contadores[1].textContent = calculaTempo(tempoObjetivo2);
+contadores[2].textContent = calculaTempo(tempoObjetivo3);
+contadores[3].textContent = calculaTempo(tempoObjetivo4);
+contadores[4].textContent = calculaTempo(tempoObjetivo5);
+contadores[5].textContent = calculaTempo(tempoObjetivo6);
 
 function calculaTempo(tempoObjetivo) {
 let tempoAtual = new Date();
