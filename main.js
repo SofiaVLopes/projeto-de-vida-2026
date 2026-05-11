@@ -33,6 +33,7 @@ for (let i=0; i<contadores.length;i++){
 }
 
 atualizaCronometro();
+setInterval(atualizaCronometro, 1000);
 
 function calculaTempo(tempoObjetivo) {
 let tempoAtual = new Date();
