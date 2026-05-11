@@ -18,18 +18,21 @@ textos[i].classList.add("ativo");
 
 const contadores = document.querySelectorAll(".contador");
 const tempoObjetivo1 = new Date("2026-08-20T00:00:00");
-const tempoObjetivo2 = new Date("2026-07-20T00:00:00");
-const tempoObjetivo3 = new Date("2026-08-20T00:00:00");
-const tempoObjetivo4 = new Date("2026-07-20T00:00:00");
-const tempoObjetivo5 = new Date("2026-09-20T00:00:00");
-const tempoObjetivo6 = new Date("2026-12-20T00:00:00");
+const tempoObjetivo2 = new Date("2026-07-10T00:00:00");
+const tempoObjetivo3 = new Date("2026-11-03T00:00:00");
+const tempoObjetivo4 = new Date("2026-12-20T00:00:00");
+const tempoObjetivo5 = new Date("2026-09-15T00:00:00");
+const tempoObjetivo6 = new Date("2026-10-02T00:00:00");
 
-contadores[0].textContent = calculaTempo(tempoObjetivo1);
-contadores[1].textContent = calculaTempo(tempoObjetivo2);
-contadores[2].textContent = calculaTempo(tempoObjetivo3);
-contadores[3].textContent = calculaTempo(tempoObjetivo4);
-contadores[4].textContent = calculaTempo(tempoObjetivo5);
-contadores[5].textContent = calculaTempo(tempoObjetivo6);
+const tempos = [tempoObjetivo1, tempoObjetivo2, tempoObjetivo3, tempoObjetivo4, tempoObjetivo5, tempoObjetivo6];
+
+function atualizaCronometro(){
+for (let i=0; i<contadores.length;i++){
+    contadores[i].textContent = calculaTempo(tempos [i]);
+}
+}
+
+atualizaCronometro();
 
 function calculaTempo(tempoObjetivo) {
 let tempoAtual = new Date();
