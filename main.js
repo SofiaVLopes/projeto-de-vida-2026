@@ -41,7 +41,7 @@ function calculaTempo(tempoObjetivo) {
     if (tempoFinal > 0) {
         return dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
     } else {
-        return "Prazo finalizado";
+        return [0,0,0,0];
     }
 }
 
@@ -51,6 +51,7 @@ function calculaTempo(tempoObjetivo) {
         contadores[i].textContent = calculaTempo(tempos [i]);
     }
 }
+
 function comecaCronometro(){   
 atualizaCronometro();
 setInterval(atualizaCronometro, 1000);
