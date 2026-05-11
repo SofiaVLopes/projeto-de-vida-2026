@@ -23,7 +23,6 @@ const tempoObjetivo3 = new Date("2026-08-20T00:00:00");
 const tempoObjetivo4 = new Date("2026-07-20T00:00:00");
 const tempoObjetivo5 = new Date("2026-09-20T00:00:00");
 const tempoObjetivo6 = new Date("2026-12-20T00:00:00");
-let tempoAtual = new Date();
 
 contadores[0].textContent = calculaTempo(tempoObjetivo1);
 contadores[1].textContent = calculaTempo(tempoObjetivo2);
@@ -35,18 +34,15 @@ contadores[5].textContent = calculaTempo(tempoObjetivo6);
 function calculaTempo(tempoObjetivo) {
 let tempoAtual = new Date();
 let tempoFinal = tempoObjetivo - tempoAtual;
-let segundos = Math.floor(tempoFinal / 1000);
-let minutos = Math.floor(segundos / 60);
-let horas = Math.floor(minutos / 60);
-let dias = Math.floor(horas / 24);
-return (
-dias +
-" dias " +
-horas +
-" horas " +
-minutos +
-" minutos " +
-segundos +
-" segundos"
-);
+let segundos = Math.floor (tempoFinal / 1000);
+let minutos = Math.floor (segundos / 60);
+let horas = Math.floor (minutos / 60);
+let dias = Math.floor (horas / 24);
+
+segundos %= 60;
+minutos %= 60;
+horas %= 24;
+
+return
+dias + " dias " + horas + " horas " + minutos + " minutos " + segundos + " segundos";
 }
